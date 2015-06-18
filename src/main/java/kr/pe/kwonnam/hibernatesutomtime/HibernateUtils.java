@@ -3,7 +3,7 @@ package kr.pe.kwonnam.hibernatesutomtime;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HIbernateUtils {
+public class HibernateUtils {
     private static final SessionFactory SESSION_FACTORY = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
