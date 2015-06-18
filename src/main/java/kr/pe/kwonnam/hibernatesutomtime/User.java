@@ -17,11 +17,11 @@ public class User {
     private String name;
 
     @Type(type = "true_false")
-    @Column(name = "employee", columnDefinition = "varchar(5)")
+    @Column(name = "employee", columnDefinition = "char(1)")
     private Boolean employee;
 
     @Type(type = "yes_no")
-    @Column(name = "male", columnDefinition = "varchar(5)")
+    @Column(name = "male", columnDefinition = "char(1)")
     private Boolean male;
 
     @Column(name = "old")
