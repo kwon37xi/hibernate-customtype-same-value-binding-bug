@@ -28,6 +28,8 @@ final Query query = session.createQuery(
 query.setParameter("1", Boolean.TRUE);
 query.setParameter("2", Boolean.FALSE);
 ```
+There are three parameters, but first two have the same java type and value, so positional parameter is required only `?1`.
+QueryDSL works like this.
 
 Real generated sql and parameters are like the following,
 ```
@@ -39,7 +41,7 @@ where user0_.employee=? and user0_.male=? and user0_.old=?
 {1: 'T', 2: 'T', 3: FALSE};
 ```
 
-But male column's type is 'yes_no', so the second parameter must be 'Y' like the following,
+But male column's type is 'yes_no', so the second parameter must be 'Y', we expected that the parameters are like the following,
 ```
 {1: 'T', 2: 'Y', 3: FALSE};
 ```
@@ -55,7 +57,7 @@ Real mapped parameters are like the following,
 ```
 {1: 'Y', 2: 'Y', 3: FALSE};
 ```
-But this must be like the following,
+But we expected that the parameters are like the following, 
 ```
 {1: 'Y', 2: 'T', 3: FALSE};
 ```
