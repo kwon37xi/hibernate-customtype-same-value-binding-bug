@@ -20,7 +20,7 @@ private Boolean employee;
 private Boolean old;
 ```
 
-In this situation, if you make a query like the following,
+In this situation, if you make a query like the following(Run kr.pe.kwonnam.hibernatesutomtime.HibernateBugReproduce class),
 
 ```java
 final Query query = session.createQuery(
