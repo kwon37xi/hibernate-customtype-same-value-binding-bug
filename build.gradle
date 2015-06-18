@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    hibernateVersion = '4.2.19.Final'
+}
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile "org.hibernate:hibernate-core:${hibernateVersion}"
+    compile "org.hibernate:hibernate-entitymanager:${hibernateVersion}"
+    compile 'com.h2database:h2:1.4.187'
+
+    testCompile 'junit:junit:4.11'
+}
