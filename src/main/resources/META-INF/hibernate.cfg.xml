@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="connection.url">jdbc:h2:mem:db1</property>
+        <property name="connection.url">jdbc:h2:mem:db1;TRACE_LEVEL_SYSTEM_OUT=3</property>
         <property name="connection.username">sa</property>
         <property name="connection.password"></property>
         <property name="connection.driver_class">org.h2.Driver</property>

@@ -5,10 +5,11 @@ repositories {
 }
 
 ext {
-    hibernateVersion = '4.2.19.Final'
+    hibernateVersion = '4.3.10.Final'
 }
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'ch.qos.logback:logback-classic:1.1.3'
     compile "org.hibernate:hibernate-core:${hibernateVersion}"
     compile "org.hibernate:hibernate-entitymanager:${hibernateVersion}"
     compile 'com.h2database:h2:1.4.187'

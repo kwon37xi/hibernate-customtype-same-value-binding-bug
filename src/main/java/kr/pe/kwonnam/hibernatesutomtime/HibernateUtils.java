@@ -9,7 +9,7 @@ public class HibernateUtils {
     private static SessionFactory buildSessionFactory() {
         try {
 
-            return new Configuration().configure().buildSessionFactory();
+            return new Configuration().configure("/META-INF/hibernate.cfg.xml").buildSessionFactory();
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }

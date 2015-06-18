@@ -2,16 +2,14 @@ package kr.pe.kwonnam.hibernatesutomtime;
 
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
 /**
  *
  */
 @Entity
 public class User {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -19,7 +17,7 @@ public class User {
     private String name;
 
     @Type(type = "true_false")
-    @Column(name = "employee", columnDefinition = "varcher(5)")
+    @Column(name = "employee", columnDefinition = "varchar(5)")
     private Boolean employee;
 
     @Type(type = "yes_no")
