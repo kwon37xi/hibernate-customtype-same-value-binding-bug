@@ -1,6 +1,7 @@
 # Hibernate JPA positional parameter bug when custom type used.
 
 Teseted with hibernate 4.2.19.Final and hibernate 4.3.10.Final.
+Hibernate 5 test case - https://github.com/kwon37xi/hibernate-5-hhh9871
 
 When there is a query that has conditions which have same Java type but custom hibernate types are different,
 and thoue types' positional parameters have same number, there is a bug.
